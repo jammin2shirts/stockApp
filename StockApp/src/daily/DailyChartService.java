@@ -31,9 +31,9 @@ public class DailyChartService {
 		removeBadData(dailyStockList);
 		
 //		DailySupportLogic.findBestDaysOfTheWeek(stockPITList);
-		DailyVPatternLogic.findReversalsAlternate(dailyStockList);
-//		List<DailyReversalEntity> reversals = DailyVPatternLogic.findReversals(dailyStockList);
-		DailyChancesLogic.followupReversalChances(dailyStockList, 10);
+		List<DailyStockEntity> reversalsList = DailyVPatternLogic.findReversals(dailyStockList);
+		List<DailyStockEntity> dailyWithVolumes = DailyVolumeLogic.findFiftyDayVolumeBreaks(reversalsList);
+//		DailyChancesLogic.followupReversalChances(dailyStockList, 10);
 		
 	}
 

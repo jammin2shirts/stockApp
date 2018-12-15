@@ -8,7 +8,7 @@ public class Main {
 
 		
 		DailyChartService dailyChartService = new DailyChartService();
-		dailyChartService.retrieveDataFor("cron", "1m");
+		dailyChartService.retrieveDataFor("cron", "6m");
 //		oneMonthService.retrieveDataFor("cron");
 	}
 	
