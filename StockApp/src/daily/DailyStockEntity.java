@@ -31,6 +31,25 @@ public class DailyStockEntity {
 	@JsonProperty("vwap")
 	private double vwap;
 	private DailyReversalEntity reversal;
+	private double fiftyDayVolumeMovingAvg;
+	private boolean brokeThroughFiftyDayVolumeMovingAvg;
+	
+
+	public boolean isBrokeThroughFiftyDayVolumeMovingAvg() {
+		return brokeThroughFiftyDayVolumeMovingAvg;
+	}
+
+	public void setBrokeThroughFiftyDayVolumeMovingAvg(boolean brokeThroughFiftyDayVolumeMovingAvg) {
+		this.brokeThroughFiftyDayVolumeMovingAvg = brokeThroughFiftyDayVolumeMovingAvg;
+	}
+
+	public double getFiftyDayVolumeMovingAvg() {
+		return fiftyDayVolumeMovingAvg;
+	}
+
+	public void setFiftyDayVolumeMovingAvg(double fiftyDayVolumeMovingAvg) {
+		this.fiftyDayVolumeMovingAvg = fiftyDayVolumeMovingAvg;
+	}
 
 	public DailyReversalEntity getReversal() {
 		return reversal;
