@@ -16,6 +16,7 @@ public class DailyHypotheticalLogic {
 				
 				if (boughtPrice * percentage <= comparableStock.getHigh()) {
 					break;
+					
 				}
 				
 			}
