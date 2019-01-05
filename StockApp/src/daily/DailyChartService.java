@@ -13,7 +13,7 @@ public class DailyChartService {
 
 	public DailyChartService() {}
 	
-	public void retrieveDataFor(String stockSymbol, String timeseries) {
+	public List<DailyStockEntity> retrieveDataFor(String stockSymbol, String timeseries) {
 		APIUtil apiUtil = new APIUtil();
 		ObjectMapper mapper = new ObjectMapper();
 		String IexTradingUrl = "https://api.iextrading.com/1.0/stock/"+stockSymbol+"/chart/" +timeseries;
@@ -30,11 +30,7 @@ public class DailyChartService {
 		List<DailyStockEntity> dailyStockList = new ArrayList<>(Arrays.asList(dailyStockResponse));	
 		removeBadData(dailyStockList);
 		
-//		DailySupportLogic.findBestDaysOfTheWeek(stockPITList);
-		List<DailyStockEntity> reversalsList = DailyVPatternLogic.findReversals(dailyStockList);
-		List<DailyStockEntity> dailyWithVolumes = DailyVolumeLogic.findFiftyDayMovingAvgs(reversalsList);
-		DailyVolumeLogic.findMovingAvgBreaks(dailyWithVolumes);
-//		DailyChancesLogic.followupReversalChances(dailyStockList, 10);
+		return dailyStockList;
 		
 	}
 

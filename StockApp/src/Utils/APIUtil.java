@@ -21,7 +21,7 @@ public class APIUtil {
 		HttpURLConnection con = (HttpURLConnection) callableURL.openConnection();
 		con.setRequestMethod("GET");
 		String jsonString = parserJson(con.getInputStream());
-		System.out.println(jsonString);
+//		System.out.println(jsonString);
 
 		return jsonString;
 	}
