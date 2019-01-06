@@ -3,10 +3,10 @@ import java.util.List;
 import java.util.Scanner;
 
 import daily.DailyChartService;
-import daily.DailyHypotheticalLogic;
 import daily.DailyStockEntity;
-import daily.DailyVPatternLogic;
-import daily.DailyVolumeLogic;
+import logics.DailyHypotheticalLogic;
+import logics.DailyVPatternLogic;
+import logics.DailyVolumeLogic;
 
 public class Main {
 
@@ -50,6 +50,7 @@ public class Main {
 			System.out.println("4. research another stock");
 			System.out.println("5. end program");
 			System.out.println("6. avg days to 5% gain");
+			System.out.println("7. calculate RSI");
 			int dataPointReview = scanner.nextInt();
 			System.out.println("");
 
@@ -71,6 +72,10 @@ public class Main {
 				break;
 			case 6:
 				DailyHypotheticalLogic.avgTimeForReturnPercentage(1.05, retrievedStockData );
+				break;
+			case 7:
+				DailyHypotheticalLogic.calculateRSI(retrievedStockData);
+				break;
 			}
 		}
 		scanner.close();

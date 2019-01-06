@@ -1,4 +1,4 @@
-package daily;
+package logics;
 
 public class WeekdayLikelihood {
 

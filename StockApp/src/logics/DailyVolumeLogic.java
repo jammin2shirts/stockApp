@@ -1,7 +1,9 @@
-package daily;
+package logics;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import daily.DailyStockEntity;
 
 public class DailyVolumeLogic {
 

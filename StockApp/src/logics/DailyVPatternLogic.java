@@ -1,6 +1,9 @@
-package daily;
+package logics;
 import java.util.ArrayList;
 import java.util.List;
+
+import daily.DailyReversalEntity;
+import daily.DailyStockEntity;
 
 public class DailyVPatternLogic {
 	
